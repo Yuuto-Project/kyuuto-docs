@@ -127,7 +127,105 @@ body {
   background-color: var(--color-bg);
 }
 
-// 1.1 Header
+// Typography
+h1,
+.h1 {
+  font-size: 3rem;
+  line-height: 1.1;
+  margin-bottom: 0.25em;
+}
+
+@media (min-width: $break-tablet) {
+  h1,
+  .h1 {
+    font-size: 4rem;
+  }
+}
+
+h2,
+.h2 {
+  font-size: 2.5rem;
+  line-height: 1.1;
+  margin-bottom: 0.45em;
+}
+
+@media (min-width: $break-tablet) {
+  h2,
+  .h2 {
+    font-size: 3.5rem;
+  }
+}
+
+h3,
+.h3 {
+  font-size: 2rem;
+  line-height: 1.1;
+}
+
+@media (min-width: $break-tablet) {
+  h3,
+  .h3 {
+    font-size: 3rem;
+  }
+}
+
+h4,
+.h4 {
+  font-size: 1.5rem;
+  line-height: 1.1;
+}
+
+@media (min-width: $break-tablet) {
+  h4,
+  .h4 {
+    font-size: 2.5rem;
+  }
+}
+
+h5,
+.h5 {
+  font-size: 1.3125rem;
+  line-height: 1.1;
+}
+
+@media (min-width: $break-tablet) {
+  h5,
+  .h5 {
+    font-size: 2rem;
+  }
+}
+
+h6,
+.h6 {
+  font-size: 1.125rem;
+  line-height: 1.1;
+}
+
+@media (min-width: $break-tablet) {
+  h6,
+  .h6 {
+    font-size: 1.5rem;
+  }
+}
+
+// 1.1 Themes
+
+.t-highlight {
+  color: var(--jb-crimson);
+}
+
+// 1.2 Utilities
+
+.u-wrapper {
+  max-width: var(--max-width);
+  margin: 0 15px;
+}
+
+.u-text--c {
+  text-align: center;
+}
+
+// 2.1 Header
 
 .header-container {
 }
@@ -212,6 +310,18 @@ body {
     display: none;
     @media screen and (min-width: $break-tablet) {
       display: block;
+    }
+  }
+}
+
+// 3.0 Landing page
+
+// 3.1 Masthead
+
+.section {
+  &--masthead {
+    > h1 {
+      color: var(--jb-lilac);
     }
   }
 }
