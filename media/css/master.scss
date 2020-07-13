@@ -1,4 +1,9 @@
-:root, [data-theme="dark"] {
+:root {
+  --max-width: 2200px;
+}
+
+:root,
+[data-theme="dark"] {
   --color-text: #fff;
   --color-bg: #27282c;
 }
@@ -7,6 +12,10 @@
   --color-text: #000;
   --color-bg: #fff;
 }
+
+// Breakpoint mixins
+$break-tablet: 768px;
+$break-tablet--before: 767px;
 
 // JetBrains Palette
 :root {
@@ -100,10 +109,57 @@ html {
 }
 
 body {
-  font-size: 1rem;
-  background-color: var(--color-bg);
-  color: var(--color-text);
   font-family: sans-serif;
+  font-size: 1rem;
   font-weight: 400;
   font-style: normal;
+  min-width: 300px;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+}
+
+// 1.1 Header
+
+.header-container {
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: var(--spacing);
+  --spacing: 15px;
+  @media screen and (min-width: $break-tablet) {
+    flex-wrap: nowrap;
+  }
+}
+
+.globalnav-toggle {
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  @media screen and (min-width: $break-tablet) {
+    order: 3;
+  }
+}
+
+.globalnav {
+  width: 100%;
+  margin-top: var(--spacing);
+  @media screen and (min-width: $break-tablet) {
+    flex-grow: 2;
+    width: auto;
+    margin: 0 var(--spacing);
+  }
+
+  &__items {
+  }
+
+  &__item {
+    @media screen and (min-width: $break-tablet) {
+      display: inline-block;
+      padding-right: var(--spacing);
+    }
+  }
 }
