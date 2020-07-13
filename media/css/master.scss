@@ -1,5 +1,6 @@
 :root {
   --max-width: 2200px;
+  --radius: 2px;
 }
 
 :root,
@@ -68,6 +69,7 @@ video {
 
 blockquote,
 body,
+button,
 dd,
 dl,
 dt,
@@ -99,6 +101,12 @@ a {
 ul,
 ol {
   list-style: none;
+}
+
+button {
+  font-size: 100%;
+  cursor: pointer;
+  border: 0;
 }
 
 // Defaults
@@ -134,12 +142,16 @@ body {
   @media screen and (min-width: $break-tablet) {
     flex-wrap: nowrap;
   }
+
+  &__logo {
+    font-size: 1.25rem;
+  }
 }
 
 .globalnav-toggle {
   width: 30px;
   height: 30px;
-  padding: 0;
+  border-radius: var(--radius);
   @media screen and (min-width: $break-tablet) {
     display: none;
   }
