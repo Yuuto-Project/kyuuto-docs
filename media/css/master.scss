@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
 
 :root {
-  --max-width: 2200px;
+  --max-width: 1440px;
   --radius: 2px;
 }
 
@@ -109,6 +109,7 @@ button {
   font-size: 100%;
   cursor: pointer;
   border: 0;
+  outline: 0;
 }
 
 // Defaults
@@ -124,6 +125,7 @@ body {
   font-size: 1rem;
   font-weight: 400;
   font-style: normal;
+  line-height: 1.625;
   min-width: 300px;
   color: var(--color-text);
   background-color: var(--color-bg);
@@ -220,11 +222,15 @@ h6,
 
 .u-wrapper {
   max-width: var(--max-width);
-  margin: 0 15px;
+  margin: 0 auto;
 }
 
 .u-text--c {
   text-align: center;
+}
+
+.u-pt--50 {
+  padding-top: 50px;
 }
 
 // 2.1 Header
@@ -241,6 +247,7 @@ h6,
   --spacing: 15px;
   @media screen and (min-width: $break-tablet) {
     flex-wrap: nowrap;
+    padding: 25px 35px;
   }
 
   &__logo {
@@ -248,12 +255,53 @@ h6,
   }
 }
 
+%burger {
+  position: absolute;
+  display: inline-block;
+  width: 20px;
+  height: 2px;
+  background-color: #fff;
+}
+
 .globalnav-toggle {
+  position: relative;
+  order: 2;
   width: 30px;
   height: 30px;
   border-radius: var(--radius);
+  background-color: rgba(150, 150, 150, 0.1);
   @media screen and (min-width: $break-tablet) {
     display: none;
+  }
+
+  &:hover &__icon {
+    opacity: 1;
+  }
+
+  &__icon {
+    @extend %burger;
+    top: calc(50% - 1px);
+    right: 5px;
+    left: 5px;
+    opacity: 0.7;
+
+    &::before,
+    &::after {
+      @extend %burger;
+      right: 0;
+      left: 0;
+      content: "";
+      transition: transform 0.3s linear, top 0.3s linear,
+      background-color 0.3s linear;
+    }
+
+    &::before {
+      bottom: 6px;
+    }
+
+    &::after {
+      top: 6px;
+    }
   }
 }
 
@@ -264,6 +312,20 @@ h6,
 
   &.is-active {
     display: block;
+
+    ~ .globalnav-toggle .globalnav-toggle__icon {
+      background-color: transparent;
+
+      &::before {
+        top: 0;
+        transform: rotate(135deg);
+      }
+
+      &::after {
+        top: 0;
+        transform: rotate(225deg);
+      }
+    }
   }
 
   @media screen and (min-width: $break-tablet) {
@@ -271,6 +333,10 @@ h6,
     flex-grow: 2;
     width: auto;
     margin: 0 var(--spacing);
+  }
+
+  @media screen and (max-width: $break-tablet--before) {
+    order: 3;
   }
 
   &__items {
@@ -318,12 +384,41 @@ h6,
 
 // 3.0 Landing page
 
+.landing {
+  .section {
+    padding: 0 15px;
+    @media screen and (min-width: $break-tablet) {
+      padding: 0 35px;
+    }
+  }
+
+  &__description {
+    p {
+      padding-bottom: 20px;
+    }
+  }
+
+  &__dcframe {
+    margin: auto;
+  }
+}
+
 // 3.1 Masthead
 
 .section {
   &--masthead {
-    > h1 {
+    h1 {
       color: var(--jb-lilac);
+    }
+  }
+
+  &__split--dual {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    @media screen and (min-width: $break-tablet) {
+      display: grid;
+      grid-template-columns: [left] 50% [right] 50%;
     }
   }
 }
