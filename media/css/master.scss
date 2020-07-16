@@ -21,8 +21,8 @@
 $break-tablet: 768px;
 $break-tablet--before: 767px;
 
-// JetBrains Palette
 :root {
+  // JetBrains Palette
   --jb-medium-grey: #7d7d7d;
   --jb-light-grey: #cdcdcd;
   --jb-amber: #f9a857;
@@ -39,7 +39,7 @@ $break-tablet--before: 767px;
   --jb-green: #18d68c;
   --jb-lemon-yellow: #fcf84a;
 
-// Yuuto and CampBuddy related colors
+  // Yuuto and CampBuddy related colors
   --yuuto-pink: #FF93CE;
   --yuuto-blue: #2BB7C4;
 }
@@ -238,17 +238,18 @@ h6,
 }
 
 // 1.3 General buttons
+.btn {  
+  margin-top: 32px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-right: 22px;
+  padding-left: 22px;
+  font-size: 20px;
+  border-radius:.25rem;
+}
 
 [data-theme = "light"] {
-  .btn{
-    margin-top: 32px;
-    padding-top: 16px;
-    padding-bottom: 16px;
-    padding-right: 22px;
-    padding-left: 22px;
-    font-size: 20px;
-    border-radius:.25rem;
-
+  .btn {
     color:#fff;
     background-color:#343a40;
     border-color:#343a40;
@@ -267,16 +268,9 @@ h6,
     border-color:#343a40
   }
 }
+
 [data-theme = "dark"] {
   .btn{
-    margin-top: 32px;
-    padding-top: 16px;
-    padding-bottom: 16px;
-    padding-right: 22px;
-    padding-left: 22px;
-    font-size: 20px;
-    border-radius:.25rem;
-
     color:#212529;
     background-color:#f8f9fa;
     border-color:#f8f9fa;
