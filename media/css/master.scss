@@ -242,9 +242,18 @@ h6,
 .o-btn {
   margin-top: 32px;
   padding-top: 16px;
+  padding-bottom: 16px;
   padding-right: 22px;
+  padding-left: 22px;
   font-size: 20px;
   border-radius: 0.25rem;
+
+  &.disabled,
+    &:disabled {
+      color: #fff;
+      background-color: #343a40;
+      border-color: #343a40;
+    }
 }
 
 [data-theme="dark"] {
@@ -259,13 +268,6 @@ h6,
       color: #212529;
       background-color: #e2e6ea;
       border-color: #dae0e5;
-    }
-
-    &.disabled,
-    &:disabled {
-      color: #fff;
-      background-color: #343a40;
-      border-color: #343a40;
     }
   }
 }
@@ -282,13 +284,6 @@ h6,
       color: #fff;
       background-color: #23272b;
       border-color: #1d2124;
-    }
-
-    &.disabled,
-    &:disabled {
-      color: #fff;
-      background-color: #343a40;
-      border-color: #343a40;
     }
   }
 }
