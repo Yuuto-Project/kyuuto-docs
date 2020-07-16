@@ -335,6 +335,9 @@ h6,
     margin: 0 var(--spacing);
   }
 
+  // Swap positions with hamburger icon on mobile
+  // Cleanest way to encompass a static or relative position
+  // within the header
   @media screen and (max-width: $break-tablet--before) {
     order: 3;
   }
