@@ -458,13 +458,15 @@ h6,
     flex-direction: column;
     margin-top: 10px;
 
-    a {
+    .o-btn {
       margin: 5px 0;
+      // Sync with Discord iframe
+      border-radius: 5px;
     }
 
     @media screen and (min-width: $break-tablet) {
       flex-direction: row;
-      a {
+      .o-btn {
         margin: 0 30px 0 0;
       }
     }
