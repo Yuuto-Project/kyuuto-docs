@@ -40,8 +40,8 @@ $break-tablet--before: 767px;
   --jb-lemon-yellow: #fcf84a;
 
   // Yuuto and CampBuddy related colors
-  --yuuto-pink: #FF93CE;
-  --yuuto-blue: #2BB7C4;
+  --yuuto-pink: #ff93ce;
+  --yuuto-blue: #2bb7c4;
 }
 
 // Global box model
@@ -238,62 +238,57 @@ h6,
 }
 
 // 1.3 General buttons
-.btn {  
+.btn {
   margin-top: 32px;
   padding-top: 16px;
-  padding-bottom: 16px;
   padding-right: 22px;
-  padding-left: 22px;
   font-size: 20px;
-  border-radius:.25rem;
+  border-radius: 0.25rem;
 }
 
-[data-theme = "light"] {
+[data-theme="light"] {
   .btn {
-    color:#fff;
-    background-color:#343a40;
-    border-color:#343a40;
+    color: #fff;
+    background-color: #343a40;
+    border-color: #343a40;
   }
   .btn.focus,
   .btn:focus,
   .btn:hover {
-    color:#fff;
-    background-color:#23272b;
-    border-color:#1d2124;
+    color: #fff;
+    background-color: #23272b;
+    border-color: #1d2124;
   }
   .btn.disabled,
   .btn:disabled {
-    color:#fff;
-    background-color:#343a40;
-    border-color:#343a40
+    color: #fff;
+    background-color: #343a40;
+    border-color: #343a40;
   }
 }
 
-[data-theme = "dark"] {
-  .btn{
-    color:#212529;
-    background-color:#f8f9fa;
-    border-color:#f8f9fa;
+[data-theme="dark"] {
+  .btn {
+    color: #212529;
+    background-color: #f8f9fa;
+    border-color: #f8f9fa;
   }
   .btn.focus,
   .btn:focus,
   .btn:hover {
-    color:#212529;
-    background-color:#e2e6ea;
-    border-color:#dae0e5;
+    color: #212529;
+    background-color: #e2e6ea;
+    border-color: #dae0e5;
   }
   .btn.disabled,
   .btn:disabled {
-    color:#fff;
-    background-color:#343a40;
-    border-color:#343a40
+    color: #fff;
+    background-color: #343a40;
+    border-color: #343a40;
   }
 }
 
 // 2.1 Header
-
-.header-container {
-}
 
 .header {
   display: flex;
@@ -349,7 +344,7 @@ h6,
       left: 0;
       content: "";
       transition: transform 0.3s linear, top 0.3s linear,
-      background-color 0.3s linear;
+        background-color 0.3s linear;
     }
 
     &::before {
