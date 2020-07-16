@@ -38,6 +38,10 @@ $break-tablet--before: 767px;
   --jb-sky-blue: #05c1fd;
   --jb-green: #18d68c;
   --jb-lemon-yellow: #fcf84a;
+
+// Yuuto and CampBuddy related colors
+  --yuuto-pink: #FF93CE;
+  --yuuto-blue: #2BB7C4;
 }
 
 // Global box model
@@ -215,7 +219,7 @@ h6,
 // 1.1 Themes
 
 .t-highlight {
-  color: var(--jb-crimson);
+  color: var(--yuuto-blue);
 }
 
 // 1.2 Utilities
@@ -232,6 +236,69 @@ h6,
 .u-pt--50 {
   padding-top: 50px;
 }
+
+// 1.3 General buttons
+:root,
+[data-theme = "light"] {
+  .btn{
+    margin-top: 32px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-right: 22px;
+    padding-left: 22px;
+    font-size: 20px;
+    border-radius:.25rem;
+
+    color:#fff;
+    background-color:#343a40;
+    border-color:#343a40;
+  }
+  .btn.focus,
+  .btn:focus,
+  .btn:hover {
+    color:#fff;
+    background-color:#23272b;
+    border-color:#1d2124;
+  }
+  .btn.disabled,
+  .btn:disabled {
+    color:#fff;
+    background-color:#343a40;
+    border-color:#343a40
+  }
+}
+[data-theme = "dark"] {
+  .btn{
+    margin-top: 32px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-right: 22px;
+    padding-left: 22px;
+    font-size: 20px;
+    border-radius:.25rem;
+
+    color:#212529;
+    background-color:#f8f9fa;
+    border-color:#f8f9fa;
+  }
+  .btn.focus,
+  .btn:focus,
+  .btn:hover {
+    color:#212529;
+    background-color:#e2e6ea;
+    border-color:#dae0e5;
+  }
+  .btn.disabled,
+  .btn:disabled {
+    color:#fff;
+    background-color:#343a40;
+    border-color:#343a40
+  }
+}
+
+
+
+
 
 // 2.1 Header
 
@@ -411,7 +478,7 @@ h6,
 .section {
   &--masthead {
     h1 {
-      color: var(--jb-lilac);
+      color: var(--yuuto-pink);
     }
   }
 
