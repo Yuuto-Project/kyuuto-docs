@@ -240,34 +240,30 @@ h6,
 // 1.3 Objects
 
 .o-btn {
-  margin-top: 32px;
-  padding-top: 16px;
-  padding-bottom: 16px;
-  padding-right: 22px;
-  padding-left: 22px;
-  font-size: 20px;
-  border-radius: 0.25rem;
+  font-size: 1.125rem;
+  padding: 16px 22px;
+  border-radius: var(--radius);
 
   &.disabled,
-    &:disabled {
-      color: #fff;
-      background-color: #343a40;
-      border-color: #343a40;
-    }
+  &:disabled {
+    color: #fff;
+    border-color: #343a40;
+    background-color: #343a40;
+  }
 }
 
 [data-theme="dark"] {
   .o-btn {
     color: #212529;
-    background-color: #f8f9fa;
     border-color: #f8f9fa;
+    background-color: #f8f9fa;
 
     &.focus,
     &:focus,
     &:hover {
       color: #212529;
-      background-color: #e2e6ea;
       border-color: #dae0e5;
+      background-color: #e2e6ea;
     }
   }
 }
@@ -275,15 +271,15 @@ h6,
 [data-theme="light"] {
   .o-btn {
     color: #fff;
-    background-color: #343a40;
     border-color: #343a40;
+    background-color: #343a40;
 
     &.focus,
     &:focus,
     &:hover {
       color: #fff;
-      background-color: #23272b;
       border-color: #1d2124;
+      background-color: #23272b;
     }
   }
 }
@@ -344,7 +340,7 @@ h6,
       left: 0;
       content: "";
       transition: transform 0.3s linear, top 0.3s linear,
-        background-color 0.3s linear;
+      background-color 0.3s linear;
     }
 
     &::before {
@@ -440,6 +436,8 @@ h6,
 // 3.0 Landing page
 
 .landing {
+  padding: 10px 0 30px;
+
   .section {
     padding: 0 15px;
     @media screen and (min-width: $break-tablet) {
@@ -448,8 +446,27 @@ h6,
   }
 
   &__description {
+    margin-bottom: 30px;
+
     p {
       padding-bottom: 20px;
+    }
+  }
+
+  &__cta {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+
+    a {
+      margin: 5px 0;
+    }
+
+    @media screen and (min-width: $break-tablet) {
+      flex-direction: row;
+      a {
+        margin: 0 30px 0 0;
+      }
     }
   }
 
